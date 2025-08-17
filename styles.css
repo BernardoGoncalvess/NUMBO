@@ -1,10 +1,29 @@
+/*
+* Global CSS
+*/
+
 html {
   font-size: 67, 5%;
   box-sizing: border-box;
 }
 
 body {
+  font-family: "Quicksand", sans-serif;
+  color: rgb(255, 238, 0);
   background-color: #262626;
-  width: calc(100svw - 120px);
-  height: calc(100svh - 120px);
+  width: calc(100svw - 50px);
+  height: calc(100svh - 80px);
+  padding: 20px 25px;
+  margin: 0;
+}
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
 }
