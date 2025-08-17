@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>
+    <header id="page-title">
       <h1>GUESS THE NUMBER 🎲</h1>
     </header>
-    <div id="start-screen">
-      <button id="play-button">Play</button>
-    </div>
-    <main id="game">
+
+    <section id="start-screen" class="page active">
+      <header>
+        <h2>Press "PLAY" to start</h2>
+      </header>
+      <main>
+        <button id="play-button">Play</button>
+      </main>
+    </section>
+
+    <section id="game" class="page">
       <header>
         <h2>The number is...</h2>
         <h3>(I'll give you a hint... It's between 1 and 100 😉)</h3>
@@ -21,10 +28,12 @@
       <div class="container">
         <div id="guess">
           <input type="number" id="player-guess" autofocus required />
+          <button id="player-guess-btn">GUESS</button>
         </div>
         <div id="hint"></div>
       </div>
-    </main>
+    </section>
+
     <footer></footer>
     <script src="./script.js"></script>
   </body>
