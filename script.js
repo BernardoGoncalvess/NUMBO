@@ -5,13 +5,18 @@ const mainGame = window.document.getElementById("game");
 const playerGuess = window.document.getElementById("player-guess");
 const playerGuessBtn = window.document.getElementById("player-guess-btn");
 const hint = window.document.getElementById("hint");
+const replay = window.document.getElementById("replay");
 
 // Logic
 
-if (startScreen.classList.contains("active")) {
-  // Hide main game page when the app is loaded
-  mainGame.style.display = "none";
+function randomNumber() {
+  return Math.floor(Math.random() * 101); // Generate a random number between 1 - 100
 }
+
+let mysteryNumber = randomNumber();
+
+//let mysterynumber = Math.floor(Math.random() * 101); // Generate a random number between 1 - 100
+//console.log(mysterynumber);
 
 playButton.addEventListener("click", function () {
   // Register the click on the play button
@@ -25,8 +30,13 @@ playButton.addEventListener("click", function () {
     startScreen.style.display = "none";
     mainGame.style.display = "block";
 
-    let mysterynumber = Math.floor(Math.random() * 101); // Generate a random number between 1 - 100
-    console.log(mysterynumber);
+    randomNumber();
+    console.log(mysteryNumber);
+
+    const line = window.document.createElement("p"); // Create a 'p' element
+    line.setAttribute("id", "answer"); // Give it the class 'answer'
+    line.textContent = "";
+    hint.appendChild(line); // Show the line on 'hint' div
 
     // innit
 
@@ -36,30 +46,61 @@ playButton.addEventListener("click", function () {
 
       if (guess > 100) {
         alert("Must be under 100");
-      } else if (guess === mysterynumber) {
+      } else if (guess === mysteryNumber) {
         // If the player guessed correctly
-        const line = window.document.createElement("p"); // Create a 'p' element
-        line.classList.add("answer"); // Give it the class 'answer'
-        line.textContent = "🎉 YOU GUESSED IT, CONGRATS! 🎉"; // Say that it is corret
-        hint.appendChild(line); // Show the line on 'hint' div
+        randomCorrectMessage = Math.floor(Math.random() * correctGuess.length); // gives a random number between 0 and the number of items on the array
+        correctMessage = correctGuess[randomCorrectMessage]; // Outputs the message at the index of the random number
+        line.textContent = correctMessage; // Say that it is correct
 
         playerGuess.value = "";
-      } else if (guess < mysterynumber) {
-        hint.value = "";
-        const line = window.document.createElement("p"); // Create a 'p' element
-        line.classList.add("answer"); // Give it the class 'answer'
-        line.textContent = "😕 You're a little off, try a bigger number ⬆️"; // Say to try a bigger number
-        hint.appendChild(line); // Show the line on 'hint' div
+      } else if (guess < mysteryNumber) {
+        // If the player guesses a lower number
+        randomBelowMessage = Math.floor(Math.random() * belowGuess.length); // gives a random number between 0 and the number of items on the array
+        belowMessage = belowGuess[randomBelowMessage]; // Outputs the message at the index of the random number
+        line.textContent = belowMessage; // Say that it is incorrect
 
         playerGuess.value = "";
-      } else if (guess > mysterynumber) {
-        hint.value = "";
-        const line = window.document.createElement("p"); // Create a 'p' element
-        line.classList.add("answer"); // Give it the class 'answer'
-        line.textContent = "😕 You're a little off, try a smaller number ⬇️"; // Say to try a smaller number
-        hint.appendChild(line); // Show the line on 'hint' div
+      } else if (guess > mysteryNumber) {
+        // If the player guesses a higher number
+        randomAboveMessage = Math.floor(Math.random() * aboveGuess.length); // gives a random number between 0 and the number of items on the array
+        aboveMessage = aboveGuess[randomAboveMessage]; // Outputs the message at the index of the random number
+        line.textContent = aboveMessage; // Say that it is incorrect
 
         playerGuess.value = "";
+      }
+    });
+
+    playerGuess.addEventListener("keyup", (event) => {
+      if (event.key === "Enter") {
+        // Register player input on the 'Enter' key
+        let guess = parseInt(playerGuess.value); // Turn the player guess input into a integer
+
+        if (guess > 100) {
+          alert("Must be under 100");
+        } else if (guess === mysteryNumber) {
+          // If the player guessed correctly
+          randomCorrectMessage = Math.floor(
+            Math.random() * correctGuess.length
+          ); // gives a random number between 0 and the number of items on the array
+          correctMessage = correctGuess[randomCorrectMessage]; // Outputs the message at the index of the random number
+          line.textContent = correctMessage; // Say that it is correct
+
+          playerGuess.value = "";
+        } else if (guess < mysteryNumber) {
+          // If the player guesses a lower number
+          randomBelowMessage = Math.floor(Math.random() * belowGuess.length); // gives a random number between 0 and the number of items on the array
+          belowMessage = belowGuess[randomBelowMessage]; // Outputs the message at the index of the random number
+          line.textContent = belowMessage; // Say that it is incorrect
+
+          playerGuess.value = "";
+        } else if (guess > mysteryNumber) {
+          // If the player guesses a higher number
+          randomAboveMessage = Math.floor(Math.random() * aboveGuess.length); // gives a random number between 0 and the number of items on the array
+          aboveMessage = aboveGuess[randomAboveMessage]; // Outputs the message at the index of the random number
+          line.textContent = aboveMessage; // Say that it is incorrect
+
+          playerGuess.value = "";
+        }
       }
     });
   }
