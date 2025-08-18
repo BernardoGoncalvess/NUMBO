@@ -4,8 +4,8 @@ correctGuess = [
   // Messages that display if you guess the number correctly
   "🎉 YOU GUESSED IT, CONGRATS! 🎉",
   "🎉 WOW! YOU ACTUALLY GUESSED IT! 🎉",
-  "You're smarter than I thought... You're correct",
-  "Are you cheating? You actually guessed it",
+  "🎉 You're smarter than I thought... You're correct 🎉",
+  "🎉 Are you cheating? You actually guessed it 🎉",
   "🎉 YOU'RE LUCKY DAY, YOU GUESSED IT! 🎉",
 ];
 
