@@ -50,23 +50,25 @@ playButton.addEventListener("click", function () {
         // If the player guessed correctly
         randomCorrectMessage = Math.floor(Math.random() * correctGuess.length); // gives a random number between 0 and the number of items on the array
         correctMessage = correctGuess[randomCorrectMessage]; // Outputs the message at the index of the random number
+        line.setAttribute("class", "rightAnswer"); // Class for corrrect messages to have different styles
         line.textContent = correctMessage; // Say that it is correct
 
-        playerGuess.value = "";
+        playerGuess.value = ""; // Clears the input field after being used
+        playerGuess.disabled = true; // Disable the input field so after you guess it you cant type anything more
       } else if (guess < mysteryNumber) {
         // If the player guesses a lower number
         randomBelowMessage = Math.floor(Math.random() * belowGuess.length); // gives a random number between 0 and the number of items on the array
         belowMessage = belowGuess[randomBelowMessage]; // Outputs the message at the index of the random number
         line.textContent = belowMessage; // Say that it is incorrect
 
-        playerGuess.value = "";
+        playerGuess.value = ""; // Clears the input field after being used
       } else if (guess > mysteryNumber) {
         // If the player guesses a higher number
         randomAboveMessage = Math.floor(Math.random() * aboveGuess.length); // gives a random number between 0 and the number of items on the array
         aboveMessage = aboveGuess[randomAboveMessage]; // Outputs the message at the index of the random number
         line.textContent = aboveMessage; // Say that it is incorrect
 
-        playerGuess.value = "";
+        playerGuess.value = ""; // Clears the input field after being used
       }
     });
 
@@ -83,23 +85,25 @@ playButton.addEventListener("click", function () {
             Math.random() * correctGuess.length
           ); // gives a random number between 0 and the number of items on the array
           correctMessage = correctGuess[randomCorrectMessage]; // Outputs the message at the index of the random number
+          line.setAttribute("class", "rightAnswer"); // Class for corrrect messages to have different styles
           line.textContent = correctMessage; // Say that it is correct
 
-          playerGuess.value = "";
+          playerGuess.value = ""; // Clears the input field after being used
+          playerGuess.disabled = true; // Disable the input field so after you guess it you cant type anything more
         } else if (guess < mysteryNumber) {
           // If the player guesses a lower number
           randomBelowMessage = Math.floor(Math.random() * belowGuess.length); // gives a random number between 0 and the number of items on the array
           belowMessage = belowGuess[randomBelowMessage]; // Outputs the message at the index of the random number
           line.textContent = belowMessage; // Say that it is incorrect
 
-          playerGuess.value = "";
+          playerGuess.value = ""; // Clears the input field after being used
         } else if (guess > mysteryNumber) {
           // If the player guesses a higher number
           randomAboveMessage = Math.floor(Math.random() * aboveGuess.length); // gives a random number between 0 and the number of items on the array
           aboveMessage = aboveGuess[randomAboveMessage]; // Outputs the message at the index of the random number
           line.textContent = aboveMessage; // Say that it is incorrect
 
-          playerGuess.value = "";
+          playerGuess.value = ""; // Clears the input field after being used
         }
       }
     });

@@ -1,0 +1,25 @@
+{
+  "name": "NUMBO",
+  "short_name": "NUMBO",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#7d9d9c",
+  "theme_color": "#f0a04b",
+  "icons": [
+    {
+      "src": "./assets/logo_dice180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/logo_dice167.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/logo_dice120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }
+  ]
+}
