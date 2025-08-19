@@ -1,7 +1,7 @@
 {
   "name": "NUMBO",
   "short_name": "NUMBO",
-  "start_url": ".",
+  "start_url": "./pwa",
   "display": "standalone",
   "background_color": "#7d9d9c",
   "theme_color": "#f0a04b",

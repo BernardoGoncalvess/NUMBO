@@ -6,6 +6,8 @@ const playerGuess = window.document.getElementById("player-guess");
 const playerGuessBtn = window.document.getElementById("player-guess-btn");
 const hint = window.document.getElementById("hint");
 const replay = window.document.getElementById("replay");
+const footer = window.document.getElementById("app-footer");
+const page = window.document.getElementById("full-page");
 
 // Logic
 
@@ -105,3 +107,7 @@ playButton.addEventListener("click", function () {
     });
   }
 });
+
+if (window.matchMedia("(display-mode: standalone)").matches) {
+  console.log("This is running as standalone.");
+}
