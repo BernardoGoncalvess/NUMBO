@@ -244,7 +244,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 80px;
   animation: slideup 1s forwards;
   position: relative;
 }
