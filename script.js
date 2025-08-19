@@ -13,10 +13,7 @@ function randomNumber() {
   return Math.floor(Math.random() * 101); // Generate a random number between 1 - 100
 }
 
-let mysteryNumber = randomNumber();
-
-//let mysterynumber = Math.floor(Math.random() * 101); // Generate a random number between 1 - 100
-//console.log(mysterynumber);
+let mysteryNumber = randomNumber(); // Save the random number on mysteryNumber variable
 
 playButton.addEventListener("click", function () {
   // Register the click on the play button
@@ -31,7 +28,6 @@ playButton.addEventListener("click", function () {
     mainGame.style.display = "block";
 
     randomNumber();
-    console.log(mysteryNumber);
 
     const line = window.document.createElement("p"); // Create a 'p' element
     line.setAttribute("id", "answer"); // Give it the class 'answer'
