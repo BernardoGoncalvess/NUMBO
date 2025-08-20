@@ -24,10 +24,3 @@ aboveGuess = [
   "You should try a lower number",
   "Try again but this time a lower number",
 ];
-
-nonPwaMessage = [
-  "<br />",
-  "<span class='nonPwaMessage'>You open this app in a browser</span>",
-  "<span class='nonPwaMessage'>Please press share and added this page to your homescreen.</span>",
-  "<br />",
-];
