@@ -10,4 +10,16 @@
   #app-footer {
     display: none;
   }
+
+  .pwa-mode #start-screen {
+    display: block;
+  }
+
+  .pwa-mode #footer {
+    display: block;
+  }
+
+  .pwa-mode #non-pwa {
+    display: none;
+  }
 }

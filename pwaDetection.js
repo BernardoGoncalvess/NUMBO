@@ -6,11 +6,10 @@
 // remover a class
 
 let isPwa = window.document.getElementById("non-pwa");
+let body = window.document.body;
 
-if (window.matchMedia("(display-mode:standalone)").matches) {
-  isPwa.classList.remove("pwa-active");
-} else {
+if (!window.matchMedia("(display-mode:standalone)").matches) {
   isPwa.classList.add("pwa-active");
-  startScreen.style.display = "block";
-  footer.style.display = "block";
+} else {
+  body.classList.add("pwa-mode");
 }
