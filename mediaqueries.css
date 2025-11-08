@@ -1,0 +1,13 @@
+@media (max-width: 480px) {
+  #non-pwa {
+    display: block !important;
+  }
+
+  #start-screen {
+    display: none;
+  }
+
+  #app-footer {
+    display: none;
+  }
+}
