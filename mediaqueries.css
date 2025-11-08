@@ -1,5 +1,5 @@
 @media (max-width: 480px) {
-  #non-pwa.pwa-active {
+  #non-pwa.pwa-notActive {
     display: block;
   }
 

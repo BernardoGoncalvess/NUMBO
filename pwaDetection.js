@@ -9,7 +9,9 @@ let isPwa = window.document.getElementById("non-pwa");
 let body = window.document.body;
 
 if (!window.matchMedia("(display-mode:standalone)").matches) {
-  isPwa.classList.add("pwa-active");
+  console.log("App not in standalone");
+
+  isPwa.classList.add("pwa-notActive");
 } else {
   body.classList.add("pwa-mode");
 }
