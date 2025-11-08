@@ -12,7 +12,7 @@ function isPwa() {
 if (isPwa()) {
   console.log("PWA-active");
 
-  window.document.getElementById("non-pwa").style.display = "none";
+  window.document.getElementById("non-pwa").style.display = "none !important";
   startScreen.style.display = "block";
   footer.style.display = "block";
 } else {
