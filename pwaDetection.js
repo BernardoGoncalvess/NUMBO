@@ -15,7 +15,7 @@ if (
 ) {
   console.log("PWA-active");
 
-  window.document.getElementById("non-pwa").style.display = "none !important";
+  window.document.getElementById("non-pwa").style.display = "none";
   startScreen.style.display = "block";
   footer.style.display = "block";
 } else {
