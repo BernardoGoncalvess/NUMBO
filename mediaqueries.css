@@ -1,4 +1,8 @@
 @media (max-width: 480px) {
+  #non-pwa.pwa-active {
+    display: block;
+  }
+
   #start-screen {
     display: none;
   }

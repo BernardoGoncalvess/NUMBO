@@ -276,13 +276,10 @@ footer header p {
 */
 
 #non-pwa {
+  display: none;
   width: 100%;
   margin: auto;
   margin-top: 200px;
-}
-
-#non-pwa.pwa-active {
-  display: none;
 }
 
 #message {

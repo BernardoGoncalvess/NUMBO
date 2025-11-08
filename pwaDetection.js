@@ -8,7 +8,7 @@
 let isPwa = window.document.getElementById("non-pwa");
 
 if (window.matchMedia("(display-mode:standalone)").matches) {
-  isPwa.classList.add("pwa-active");
-} else {
   isPwa.classList.remove("pwa-active");
+} else {
+  isPwa.classList.add("pwa-active");
 }
