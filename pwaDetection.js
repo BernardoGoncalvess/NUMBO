@@ -12,7 +12,8 @@
 let nonPwa = window.document.getElementById("non-pwa");
 if (
   window.matchMedia('("display-mode: standalone")').matches ||
-  window.navigator.standalone === true
+  (window.navigator.standalone === true &&
+    window.matchMedia("(width <= 480px)"))
 ) {
   console.log("PWA-active");
 
