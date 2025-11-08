@@ -11,4 +11,6 @@ if (window.matchMedia("(display-mode:standalone)").matches) {
   isPwa.classList.remove("pwa-active");
 } else {
   isPwa.classList.add("pwa-active");
+  startScreen.style.display = "block";
+  footer.style.display = "block";
 }
