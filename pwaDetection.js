@@ -1,25 +1,14 @@
-// Detect if it's in PWA on phone
+// Detects if it's opened in PWA ----------
 
-// function that detects if it's opened in standalone ----------
-// function isPwa() {
-//   return (
-//     window.matchMedia('("display-mode: standalone")').matches ||
-//     window.navigator.standalone === true //IOS
-//   );
-// }
+// Se o modo de display do ecra for standalone
+// adicionar a class .pwa-active
+// senao
+// remover a class
 
-// init if its opened in standalone ----------
-let nonPwa = window.document.getElementById("non-pwa");
-if (
-  window.matchMedia("(display-mode: standalone)").matches ||
-  (window.navigator.standalone === true &&
-    window.matchMedia("(width <= 480px)").matches)
-) {
-  console.log("PWA-active");
+let isPwa = window.document.getElementById("non-pwa");
 
-  nonPwa.style.display = "none";
-  startScreen.style.display = "block";
-  footer.style.display = "block";
+if (window.matchMedia("(display-mode:standalone)").matches) {
+  isPwa.classList.add("pwa-active");
 } else {
-  console.log("PWA-not active");
+  isPwa.classList.remove("pwa-active");
 }

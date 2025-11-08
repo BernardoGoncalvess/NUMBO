@@ -272,24 +272,27 @@ footer header p {
 }
 
 /*
-* No PWA page
+* PWA 
 */
 
-#message {
+#non-pwa {
   width: 100%;
-  height: 150px;
-  position: relative;
-  top: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  margin: auto;
+  margin-top: 200px;
 }
 
-.nonPwaPage {
-  margin: 0;
-  padding: 0;
+#non-pwa.pwa-active {
+  display: none;
+}
+
+#message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#message .nonPwaMessage {
+  font-size: 24px;
   text-align: center;
-  padding-top: 20px;
-  font-size: 30px;
 }
