@@ -11,7 +11,7 @@
 // init if its opened in standalone ----------
 let nonPwa = window.document.getElementById("non-pwa");
 if (
-  window.matchMedia('("display-mode: standalone")').matches ||
+  window.matchMedia("(display-mode: standalone)").matches ||
   (window.navigator.standalone === true &&
     window.matchMedia("(width <= 480px)").matches)
 ) {

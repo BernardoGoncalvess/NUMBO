@@ -1,6 +1,6 @@
 @media (max-width: 480px) {
   #non-pwa {
-    display: block;
+    display: block !important;
   }
 
   #start-screen {
